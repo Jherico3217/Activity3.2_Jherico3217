@@ -157,3 +157,8 @@ VALUES
     (9, 9, 109),  -- Leomord has Blade Armor
     (10, 10, 110);  -- Chou has Feather of Heaven
 
+    CREATE DATABASE hero001;
+-- 3. Create new branch named "feat/add-column-price"
+
+    ALTER TABLE Item
+    ADD Price DECIMAL; 
