@@ -162,3 +162,12 @@ VALUES
 
     ALTER TABLE Item
     ADD Price DECIMAL; 
+
+    CREATE DATABASE hero001;
+-- 4. Create new branch named "feat/update-delete-inactive"
+
+    UPDATE Hero
+    SET is_active = false
+    WHERE hero_id = 1;
+
+    DELETE HeroItem WHERE item_id = 101;
