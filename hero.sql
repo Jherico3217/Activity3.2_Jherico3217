@@ -71,8 +71,6 @@ CREATE TABLE IF NOT EXISTS public.HeroItem
     FOREIGN KEY (item_id) REFERENCES Item(item_id)
 );
 
-CREATE DATABASE hero001;
-
 --2. Create new branch named "feat/insert-data"
 
 -- Insert data into the Class table
@@ -159,13 +157,11 @@ VALUES
     (9, 9, 109),  -- Leomord has Blade Armor
     (10, 10, 110);  -- Chou has Feather of Heaven
 
-    CREATE DATABASE hero001;
 -- 3. Create new branch named "feat/add-column-price"
 
     ALTER TABLE Item
     ADD Price DECIMAL; 
 
-    CREATE DATABASE hero001;
 -- 4. Create new branch named "feat/update-delete-inactive"
 
     UPDATE Hero
@@ -174,9 +170,14 @@ VALUES
 
     DELETE HeroItem WHERE item_id = 101;
 
-    CREATE DATABASE hero001;
 -- 5. Create new branch named "feat/select-active-players"
 
     SELECT DISTINCT player_id, player_name, player_level, player_experience, hero_id
-    FROM Player
+    FROM public.player
     WHERE is_active = true;
+
+--6. Create new branch named "feat/select-heroes-archers"
+
+    SELECT class_id, class_name, class_description
+    FROM public.class
+    WHERE class_id = 104 AND hero_id = 4;
