@@ -1,3 +1,5 @@
+-- Create a new branch named feat/create-database
+
 CREATE DATABASE hero001;
 
 --1. Create new branch named "feat/create-tables"
@@ -171,3 +173,10 @@ VALUES
     WHERE hero_id = 1;
 
     DELETE HeroItem WHERE item_id = 101;
+
+    CREATE DATABASE hero001;
+-- 5. Create new branch named "feat/select-active-players"
+
+    SELECT DISTINCT player_id, player_name, player_level, player_experience, hero_id
+    FROM Player
+    WHERE is_active = true;
