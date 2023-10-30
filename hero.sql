@@ -11,3 +11,67 @@ VALUES
     (109, 'Tank', 'High durability and crowd control'),
     (110, 'Wizard', 'Masters of arcane magic'); 
 
+INSERT INTO Item (item_id, item_name, item_description, item_type)
+VALUES
+    (101, 'Blade of Despair', 'Increases physical damage', 'Weapon'),
+    (102, 'Magic Shoes', 'Reduces skill cooldown', 'Armor'),
+    (103, 'Bloodlust Axe', 'Provides spell vamp', 'Consumable'),
+    (104, 'Demon Hunter Sword', 'Increases attack speed', 'Weapon'),
+    (105, 'Queens Wings', 'Provides lifesteal', 'Armor'),
+    (106, 'Endless Battle', 'Enhances basic attacks', 'Weapon'),
+    (107, 'Necklace of Durance', 'Reduces enemy healing', 'Consumable'),
+    (108, 'Thunder Belt', 'Adds a slow effect', 'Armor'),
+    (109, 'Blade Armor', 'Reflects physical damage', 'Armor'),
+    (110, 'Feather of Heaven', 'Increases attack speed', 'Weapon');
+
+INSERT INTO Hero (hero_id, hero_name, class_id, is_active)
+VALUES
+    (1, 'Aldous', 101, true),
+    (2, 'Karina', 102, true),
+    (3, 'Gusion', 103, false),
+    (4, 'Layla', 101, true),
+    (5, 'Selena', 102, true),
+    (6, 'Hayabusa', 103, false),
+    (7, 'Franco', 101, true),
+    (8, 'Fanny', 102, true),
+    (9, 'Leomord', 103, false),
+    (10, 'Chou', 101, true);
+	
+INSERT INTO Player (player_id, player_name, player_level, player_experience, hero_id)
+VALUES
+    (1, 'ShinmenTakezo', 10, 1000, 1),
+    (2, 'Elgin', 8, 800, 2),
+    (3, 'Betosky', 12, 1500, 3),
+    (4, 'GosuGeneral', 15, 2000, 4),
+    (5, 'MobileLegendsTV', 7, 700, 5),
+    (6, 'HororoChan', 9, 950, 6),
+    (7, 'CongTV', 14, 1800, 7),
+    (8, 'BluePanda', 11, 1200, 8),
+    (9, 'LeomordLegend', 13, 1600, 9),
+    (10, 'ShinmenX', 6, 650, 10);
+	
+INSERT INTO Skills (skill_id, skill_name, skill_description, class_id)
+VALUES
+    (301, 'Groundbreaker', 'Powerful melee strike', 101),
+    (302, 'Magic Missile', 'Launches a magic projectile', 102),
+    (303, 'Shadow Kill', 'Sneak attack from shadows', 103),
+    (304, 'Long Shot', 'Precise ranged attack', 104),
+    (305, 'Eagle Eye', 'Enhances accuracy and range', 105),
+    (306, 'Assassinate', 'Silent and deadly strike', 106),
+    (307, 'Dragon Punch', 'Powerful melee combo', 107),
+    (308, 'Healing Wave', 'Restores allys health', 108),
+    (309, 'Iron Wall', 'High defense and protection', 109),
+    (310, 'Arcane Burst', 'Unleashes arcane energy', 110);
+	
+INSERT INTO HeroItem (hero_item_id, hero_id, item_id)
+VALUES
+    (1, 1, 101),
+    (2, 2, 102),
+    (3, 3, 103),
+    (4, 4, 104),
+    (5, 5, 105),
+    (6, 6, 106),
+    (7, 7, 107),
+    (8, 8, 108),
+    (9, 9, 109),
+    (10, 10, 110);
